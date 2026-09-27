@@ -1,4 +1,3 @@
-
 let movies = [
     {id: 1, title:"Dune", year: 2021, watched: false},
     {id: 2, title:"Interstellar", year: 2022, watched: false},
@@ -93,3 +92,7 @@ function toggleTheme() {
 function markWatched(card) {
     card.classList.toggle("watched");
 }
+link.addEventListener("click", (event) => {
+    event.preventDefault();
+    detailsBlock.textContent = `${movie.year}, ${movie.watched}`;
+});
